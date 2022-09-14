@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Cercospora leaf spot{% endblock %}
+
+{% block content %}
+<section class="vh-100" style="background-color: ;">
+
+   <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-12">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="{% static 'images/test2.jpg' %}" alt="photo"
+                class="img-fluid" style="border-radius: 1rem 0 0 1rem;"/>
+            </div>
+
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+                <div>
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                    <h3>CERCOSPORA LEAF SPOT OF COWPEA</h3>
+                  </div>
+                  <h5>Symptoms</h5>
+                  <p>
+                    <ul>
+                      <li>First symptoms are leaves having inconspicuous spots, reddish-brown- up to15mm diameter, not restricted by veins.</li>
+                      <li>Leaf spots merge as leaves go yellow and die.</li>
+                      <li>Dead areas on the leaf may fall out giving a shot-hole appearance.</li>
+                      <li>The disease flourishes on older leaves.</li>
+                      <li>The disease is caused by the fungus, Mycosphaerella cruenta</li>
+                    </ul>
+                  </p>
+                  <p>
+                    <h5>Prevention</h5>
+                    <ol>
+                      <li>Use less susceptible cowpea varieties (e.g. slipea 1, 2 and 3; VRB-10)</li>
+                      <li>Use clean seed; either obtain the seed from a reliable seed supplier or clean the seed of plant debris.</li>
+                      <li>Plant new crop seed and not from older ones with disease.</li>
+                      <li>Use healthy, and disease-free seeds</li>
+                      <li>Use correct planting density (wider spacing such as 50 cm x 30 cm or 50 cm x 40 cm)</li>
+                      <li>Intercrop cowpea with maize or sorghum in order to reduce spread of the disease</li>
+                      <li>Remove alternative host plants (e.g. Ageratum conyzoides)</li>
+                      <li>Remove volunteer plants of cowpea and other legumes before field planting.</li>
+                      <li>Remove weeds at 3 and 6 weeks after planting</li>
+                      <li>Plough and harrow to destroy fungal inoculum in the soil</li>
+                      <li>Plough under crop residues</li>
+                      <li>Crop rotation (cowpea + maize)</li>
+                      <li>Destroy diseased debris</li>
+                      <li>Avoiding excessive irrigation is recommended</li>
+                    </ol>
+                  </p>
+                  <p>
+                  <h5>Direct control</h5>
+                    <ul>
+                      <li>Remove diseased plants and burn outside the crop field, burn or bury the trash after harvest.</li>
+                      <li>Remove heavily infected plants to prevent spread of inoculum</li>
+                      <li>Early pruning of infected leaves to prevent further spread of inoculum</li>
+                      <li>Spray aqueous leaf extracts from neem and pepper (leaf powder: 100 g/ litres water). Apply early in the morning or late in the evening; Do not apply when it is raining or windy; Use protective gears to avoid being poisoned.</li>
+                      <li>Seed treatment with Mancozeb (ethylene Bisdithiocarbamate): 80g a.i/kg of seeds.</li>
+                      <li>Foliage treatment with Mancozeb fungicide: 100 ml/14 L of water. This should be applied after the crop has flowered and pods are starting to develop, with a maximum of 2-3 applications per planting season, though its cost-effectiveness is doubtful.</li>
+                      <li>Apply Cupric oxide (Copper oxide) on cowpea foliage</li>
+                    </ul>
+                  </p>
+
+                  <div class="pt-1 mb-4">
+                    <a href="{% url 'index' %}" class="btn btn-dark btn-lg ">Go back</a>
+                    <a href="{% url 'index' %}" class="btn btn-dark btn-lg ">Read more</a>
+                  </div>
+                  <a href="#!" class="small text-muted">Terms of use.</a>
+                  <a href="#!" class="small text-muted">Privacy policy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

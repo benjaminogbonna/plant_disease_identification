@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Anthracnose{% endblock %}
+
+{% block content %}
+<section class="vh-100" style="background-color: ;">
+
+   <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-12">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="{% static 'images/b.jpg' %}" alt="photo"
+                class="img-fluid" style="border-radius: 1rem 0 0 1rem;"/>
+            </div>
+
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+                <div>
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                    <h3>ANTHRACNOSE (Leaf spot) OF SORGHUM</h3>
+                  </div>
+                  <h5>Symptoms</h5>
+                  <p>
+                    <ul>
+                      <li>The disease appears as small red coloured spots on both surfaces of the leaf</li>
+                      <li>The centre of the spot is white in colour encircled by red, purple or brown margin</li>
+                      <li>Numerous small black dots like acervuli are seen on the white surface of the lesions</li>
+                      <li>The infection deteriorates the physical and chemical quality of the grains and causes a reduction in grain yield of up to 25%</li>
+                      <li>The disease is caused by the fungus Colletotrichum sublineola</li>
+                    </ul>
+                  </p>
+                  <p>
+                    <h5>Prevention</h5>
+                    <ol>
+                      <li>Resistant hybrids may be available information is available from research centres and suppliers</li>
+                      <li>Use certified or clean seed from disease free plants; this is important as this disease can be transmitted by the seeds</li>
+                      <li>Remove other susceptible host plants such as grasses which may harbour the disease</li>
+                      <li>Burn plant residues after harvesting and immediately deep plough the field as the fungus can survive on crop residues</li>
+                      <li>Rotate sorghum on a 2-year basis with crops other than cereals such as chickpeas or beans</li>
+                      <li>In poorly rotated fields, plough under infested residues where soil erosion is not a problem</li>
+                      <li>Thiram can be used as a seed treatment. Thiram 80% WP (Thiram Granuflo 80 WP) can be used as a seed treatment. Apply as a water slurry at a rate of 190-260g to 100kg of seed. Apply only to good quality seed and ensure uniform coverage. Treat seed immediately prior to sowing and do not store seed treated.</li>
+                    </ol>
+                  </p>
+                  <p>
+                  <h5>Direct control</h5>
+                    <ul>
+                      <li>Remove and dispose of infected plants at the earliest stage possible by burning or burying</li>
+                    </ul>
+                  </p>
+
+                  <div class="pt-1 mb-4">
+                    <a href="{% url 'index' %}" class="btn btn-dark btn-lg ">Go back</a>
+                    <a href="{% url 'index' %}" class="btn btn-dark btn-lg ">Read more</a>
+                  </div>
+                  <a href="#!" class="small text-muted">Terms of use.</a>
+                  <a href="#!" class="small text-muted">Privacy policy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

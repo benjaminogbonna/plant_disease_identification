@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Phosphorus Deficiency{% endblock %}
+
+{% block content %}
+<section class="vh-100" style="background-color: ;">
+
+   <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-12">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="{% static 'images/test3.jpg' %}" alt="photo"
+                class="img-fluid" style="border-radius: 1rem 0 0 1rem;"/>
+            </div>
+
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+                <div>
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                    <h3>PHOSPHORUS DEFICIENCY IN MAIZE</h3>
+                  </div>
+                  <h5>Symptoms</h5>
+                  <p>
+                    <ul>
+                      <li>Young plant look dwarfed and thin with dark green leaves.</li>
+                      <li>It may also manifest by reddish discoloration at juvenile stages of growth</li>
+                      <li>Leaf margins veins and stems show purple tints which may spread over the whole leaf blade</li>
+                      <li>The disease is caused by phosphorus deficiency in the farm soil.</li>
+                    </ul>
+                  </p>
+                  <p>
+                    <h5>Prevention</h5>
+                    <ol>
+                      <li>Apply manure e.g. well decomposed compost manure made from plants.
+                        Apply 12.5 tonnes/Ha at least five weeks before planting maize.
+                        This can be achieved by applying an equivalent of 20 L tin of manure (16-18 Kg)
+                        by broadcasting every 8 metres/steps. If manure is not adequate,
+                        apply 2 handfuls (0.5-1.5 kg) per planting station and mix with the soil before planting
+                      </li>
+
+                      <li>Apply inorganic fertilizers such as 23:10:5+6S+1.0Zn at the rate of 100 kg/Ha
+                        using a bottle top of a 300 ml glass Fanta bottle with lining inside at 10
+                        cm away from the planting station and 10 cm deep with planting stations spaced
+                        at 25 cm apart (one-one planting pattern)
+                      </li>
+
+                      <li>Neutralize acidic soils, adequate drainage of crop fields, reduce high iron
+                        content in the soil
+                      </li>
+
+                    </ol>
+                  </p>
+
+
+                  <div class="pt-1 mb-4">
+                    <a href="{% url 'index' %}" class="btn btn-dark btn-lg ">Go back</a>
+                    <a href="{% url 'index' %}" class="btn btn-dark btn-lg ">Read more</a>
+                  </div>
+                  <a href="#!" class="small text-muted">Terms of use.</a>
+                  <a href="#!" class="small text-muted">Privacy policy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

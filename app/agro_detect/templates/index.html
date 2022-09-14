@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}Agro Detect{% endblock %}
+
+{% block content %}
+    <section class="vh-100" style="background-color: #9A616D;">
+
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              {% comment %}
+              <img src="{% static 'images/1.jpeg' %}" alt="photo"
+                class="img-fluid" style="border-radius: 1rem 0 0 1rem;"/>
+              {% endcomment %}
+              <output id='list'></output>
+            </div>
+
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+                <form method="post" enctype="multipart/form-data" name='form1'>
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                    <span class="h1 fw-bold mb-0">Agro Detect</span>
+                  </div>
+                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Upload an image or use camera.</h5>
+                  <h3 style='color: green;'>Detected Disease:
+
+                    {% if pred == 'anthracnose' %}
+                      <a href="{% url 'anthracnose' %}" id='predi'>{{prediction|title}}, {{probability}}</a>
+                    {% elif pred == 'cercospora_leaf_spot' %}
+                      <a href="{% url 'cls' %}" id='predi'>{{prediction|title}}, {{probability}}</a>
+                    {% elif pred == 'phosphorus_deficiency' %}
+                      <a href="{% url 'pd' %}" id='predi'>{{prediction|title}}, {{probability}}</a>
+                    {% endif %}
+
+                    </h3><br/>
+                  <div class="form-outline mb-4">
+                    {% csrf_token %}
+                    <input type="file" id='files' name="image" accept='image/*' required/>
+                  </div>
+
+                  <div class="pt-1 mb-4">
+                    <button class="btn btn-dark btn-lg btn-block" type="submit" >Check</button>
+                  </div>
+                  <div class="pt-1 mb-4">
+                    <a href="{% url 'c' %}" class="btn btn-dark btn-lg btn-block">Use Camera</a>
+                  </div>
+                  <a href="#!" class="small text-muted">Terms of use.</a>
+                  <a href="#!" class="small text-muted">Privacy policy</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+{% endblock %}
